@@ -84,16 +84,16 @@ ScrollReveal({
 });
 
 // Target Elements
-ScrollReveal().reveal('.home .info h2, .section-title-1, .section-title-2', {delay: 300, origin: 'left'});
-ScrollReveal().reveal('.home .info h3, .home .info p, .about-info .btn', {delay: 400, origin: 'right'});
-ScrollReveal().reveal('.home .info .btn', {delay: 400, origin: 'bottom'});
-ScrollReveal().reveal('.media-icons i, .contact-left li', {delay: 400, origin: 'left', interval: 200});
-ScrollReveal().reveal('.home-img', {delay: 300, origin: 'bottom'});
-ScrollReveal().reveal('.about-info, .description', {delay: 300, origin: 'right'});
-ScrollReveal().reveal('.about-professional-list li, .contact-right', {delay: 300, origin: 'right', interval: 200});
-ScrollReveal().reveal('.skills-description, .wk, .project, .contact-left h2', {delay: 300, origin: 'left'});
-ScrollReveal().reveal('.education, .education-all, .card', {delay: 200, origin: 'bottom', interval: 100});
-ScrollReveal().reveal('footer .group', {delay: 200, origin: 'bottom'});
+ScrollReveal().reveal('.home .info h2, .section-title-1, .section-title-2', {delay: 30, origin: 'left'});
+ScrollReveal().reveal('.home .info h3, .home .info p, .about-info .btn', {delay: 40, origin: 'right'});
+ScrollReveal().reveal('.home .info .btn', {delay: 40, origin: 'bottom'});
+ScrollReveal().reveal('.media-icons i, .contact-left li', {delay: 40, origin: 'left', interval: 200});
+ScrollReveal().reveal('.home-img', {delay: 30, origin: 'bottom'});
+ScrollReveal().reveal('.about-info, .description', {delay: 30, origin: 'right'});
+ScrollReveal().reveal('.about-professional-list li, .contact-right', {delay: 30, origin: 'right', interval: 200});
+ScrollReveal().reveal('.skills-description, .wk, .project, .contact-left h2', {delay: 30, origin: 'left'});
+ScrollReveal().reveal('.education, .education-all, .card', {delay: 20, origin: 'bottom', interval: 100});
+ScrollReveal().reveal('footer .group', {delay: 20, origin: 'bottom'});
 
 // Form Submission
 var form = document.getElementById("my-form");
