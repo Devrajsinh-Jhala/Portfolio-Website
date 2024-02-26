@@ -1,5 +1,6 @@
 import ExperienceSection from "@/containers/ExperienceSection";
 import HeroSection from "@/containers/HeroSection";
+import ProjectsSection from "@/containers/ProjectsSection";
 import TopSkillsContainer from "@/containers/TopSkillsContainer";
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
     <section className=" max-w-4xl mx-auto">
       <HeroSection />
       <TopSkillsContainer />
+      <ProjectsSection />
     </section>
   );
 }
