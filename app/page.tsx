@@ -1,3 +1,4 @@
+import BlogSection from "@/containers/BlogSection";
 import ExperienceSection from "@/containers/ExperienceSection";
 import HeroSection from "@/containers/HeroSection";
 import ProjectsSection from "@/containers/ProjectsSection";
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection />
       <TopSkillsContainer />
       <ProjectsSection />
+      <BlogSection />
     </section>
   );
 }
