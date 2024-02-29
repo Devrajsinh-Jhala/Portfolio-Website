@@ -20,11 +20,11 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <section className=" my-16 px-10 lg:px-0 lg:flex-row flex flex-col-reverse items-center justify-between">
-      <section className="">
+    <section className=" my-16 px-5 lg:px-0 lg:flex-row flex flex-col-reverse items-center justify-between">
+      <section className="px-5 lg:px-0">
         <div className="flex flex-col lg:items-start justify-start">
           <p className="text-sm text-center lg:text-start">Hello I am</p>
-          <div className="text-5xl text-center font-bold ">
+          <div className=" text-xl sm:text-5xl text-center font-bold ">
             <p className={sarina.className}>Devrajsinh Jhala</p>
           </div>
           <p className="max-w-lg mt-2 text-md text-center lg:text-start ">
@@ -32,7 +32,7 @@ const HeroSection = (props: Props) => {
             TypeScript. I have over <b>2 years </b>of experience in building and
             developing web applications for various start-ups and organizations.
           </p>
-          <div className="flex items-center mt-7 justify-center space-x-8">
+          <div className="flex items-center mt-7 justify-center space-x-4 sm:space-x-8">
             <Link
               target="_blank"
               href={
@@ -80,7 +80,7 @@ const HeroSection = (props: Props) => {
       </section>
       {/* Image */}
       <section>
-        <div className="relative h-[350px] w-[350px] border dark:border-white border-black rounded-full">
+        <div className="relative h-[180px] w-[180px] sm:h-[350px] mb-10 lg:mb-0 sm:w-[350px] border dark:border-white border-black rounded-full">
           <Image
             className="rounded-full p-2"
             src={hero.src}

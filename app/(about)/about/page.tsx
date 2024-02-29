@@ -23,7 +23,7 @@ const sarina = Sarina({
 type Props = {};
 const About = (props: Props) => {
   return (
-    <section className="my-10 px-10 lg:px-0 max-w-4xl mx-auto">
+    <section className="my-10 px-5 lg:px-0 max-w-4xl mx-auto">
       <section className="flex flex-col items-center justify-center space-y-5">
         <div className="relative w-28 h-28 border border-foreground rounded-full">
           <Image

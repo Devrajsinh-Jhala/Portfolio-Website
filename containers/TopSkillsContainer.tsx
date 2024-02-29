@@ -4,9 +4,9 @@ type Props = {};
 
 const TopSkillsContainer = (props: Props) => {
   return (
-    <section className="px-10 lg:px-0">
+    <section className="px-5 lg:px-0">
       <p className="text-3xl font-bold">My Top Skills</p>
-      <section className="grid grid-cols-2 lg:grid-cols-3 gap-4 my-7">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 my-7">
         {skillsData.map((skillData, i) => {
           const Icon = skillData.Icon;
           return (

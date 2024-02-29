@@ -18,7 +18,7 @@ const Footer = (props: Props) => {
         </Link>
       </div>
       <div>
-        <ul className="flex items-center justify-center space-x-10">
+        <ul className="flex flex-col sm:flex-row items-center px-10 justify-center space-y-5 lg:space-y-0 lg:space-x-10">
           {socials.map((social, i) => {
             const Icon = social.symbol;
             return (

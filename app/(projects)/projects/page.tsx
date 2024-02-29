@@ -20,7 +20,7 @@ const allPostsQuery = groq`
 const Projects = async (props: Props) => {
   const allProjects = await sanityClient.fetch(allPostsQuery);
   return (
-    <section className="my-10 max-w-4xl px-10 lg:px-0 mx-auto">
+    <section className="my-10 max-w-4xl px-5 lg:px-0 mx-auto">
       <section className="my-10">
         <p className="text-3xl font-bold">My Projects</p>
         <p className="mt-3">

@@ -29,7 +29,12 @@ export function ModeToggle() {
   };
 
   return (
-    <Button onClick={() => toggleTheme()} variant={"outline"} size={"icon"}>
+    <Button
+      className=""
+      onClick={() => toggleTheme()}
+      variant={"outline"}
+      size={"icon"}
+    >
       {isDarkMode === true ? <Moon /> : <Sun />}
     </Button>
   );

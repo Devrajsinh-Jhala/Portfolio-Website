@@ -81,7 +81,7 @@ _updatedAt
 
   return (
     <>
-      <article className="px-10 max-w-[1000px] mx-auto w-full pb-28">
+      <article className="px-5 max-w-[1000px] mx-auto w-full pb-28">
         <section>
           <Image
             src={urlFor(post.mainImage).url()}
