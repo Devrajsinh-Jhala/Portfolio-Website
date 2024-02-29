@@ -35,7 +35,9 @@ const About = (props: Props) => {
           />
         </div>
         <div className={sarina.className}>
-          <p className="text-2xl">"Building is the actual way of learning"</p>
+          <p className="text-2xl">
+            &quot;Building is the actual way of learning&quot;
+          </p>
         </div>
 
         {/* Statistics Section */}
@@ -70,11 +72,12 @@ const About = (props: Props) => {
       <section className="my-10 flex flex-col text-start space-y-5">
         <p className="">
           Hello! I am Devraj Jhala, a front end full stack developer hailing
-          from India. I am currently a final year student pursuing a Bachelor's
-          degree in Computer Science and Engineering. I have interned in various
-          positions such as front end developer and full stack developer in
-          startups and mid-sized companies. I really enjoy working with Next.js,
-          Tailwind, TypeScript to build UI components and interfaces.
+          from India. I am currently a final year student pursuing a
+          Bachelor&apos;s degree in Computer Science and Engineering. I have
+          interned in various positions such as front end developer and full
+          stack developer in startups and mid-sized companies. I really enjoy
+          working with Next.js, Tailwind, TypeScript to build UI components and
+          interfaces.
         </p>
 
         <p>

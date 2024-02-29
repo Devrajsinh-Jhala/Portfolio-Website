@@ -1,7 +1,6 @@
 import { getBlogPosts } from "@/utils/getBlogPosts";
 import { getIndividualBlog } from "@/utils/getIndividualBlog";
 import React from "react";
-import { MDXRemote } from "next-mdx-remote/rsc";
 import { convertDate } from "@/utils/convertDate";
 import rehypeHighlight from "rehype-highlight";
 import Image from "next/image";
@@ -28,12 +27,13 @@ export async function generateMetadata({
   };
 }
 
-export async function generateStaticParams() {
-  const homePagePosts = await getBlogPosts();
-  return homePagePosts.map((homePagePost: any) => {
-    homePagePost.node.slug;
-  });
-}
+// export async function generateStaticParams() {
+//   const homePagePosts = await getBlogPosts();
+//   console.log(homePagePosts);
+//   return homePagePosts.edges.map((homePagePost: any) => {
+//     homePagePost.node.slug;
+//   });
+// }
 const Post = async ({ params: { slug } }: Props) => {
   const post = await getIndividualBlog(slug);
   const options = {
@@ -74,6 +74,7 @@ const Post = async ({ params: { slug } }: Props) => {
             width={1000}
             height={1000}
             className="rounded-xl"
+            priority
           />
           <h1 className="text-3xl mt-10 mb-3 font-bold "> {post.title}</h1>
           <p className="line-clamp-none">{post.brief}</p>

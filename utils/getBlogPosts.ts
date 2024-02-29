@@ -1,4 +1,4 @@
-export async function getBlogPosts() {
+export async function getBlogPosts(cursor?: string) {
   try {
     const { data } = await fetch("https://gql.hashnode.com", {
       method: "POST",
@@ -8,7 +8,11 @@ export async function getBlogPosts() {
       body: JSON.stringify({
         query: ` {
             publication(host: "devraj-jhala.hashnode.dev") {
-              posts(first: 10) {
+              posts(first: 10, after: "${cursor}") {
+                pageInfo{
+                  endCursor
+                  hasNextPage
+                }
                 edges {
                   node {
                     title
@@ -32,7 +36,7 @@ export async function getBlogPosts() {
       }),
     }).then((response) => response.json());
 
-    return data.publication.posts.edges
+    return data.publication.posts
   } catch (err) {
     console.log(err);
   }

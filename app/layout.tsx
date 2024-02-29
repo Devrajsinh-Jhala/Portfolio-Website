@@ -19,10 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system">
-          <div className="max-w-5xl w-screen  overflow-x-hidden  mx-auto">
+          <div className="max-w-5xl w-screen selection:bg-[#eea727] scrollbar-hide h-screen overflow-x-hidden  mx-auto">
             <Navbar />
             {children}
             <Footer />
