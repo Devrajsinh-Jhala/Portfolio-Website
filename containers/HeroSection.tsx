@@ -20,14 +20,14 @@ type Props = {};
 
 const HeroSection = (props: Props) => {
   return (
-    <section className=" my-16  flex items-center justify-between">
-      <section>
-        <div className="flex flex-col items-start justify-start">
-          <p className="text-sm">Hello I am</p>
-          <div className="text-5xl font-bold ">
+    <section className=" my-16 px-10 lg:px-0 lg:flex-row flex flex-col-reverse items-center justify-between">
+      <section className="">
+        <div className="flex flex-col lg:items-start justify-start">
+          <p className="text-sm text-center lg:text-start">Hello I am</p>
+          <div className="text-5xl text-center font-bold ">
             <p className={sarina.className}>Devrajsinh Jhala</p>
           </div>
-          <p className="max-w-lg mt-2 text-md ">
+          <p className="max-w-lg mt-2 text-md text-center lg:text-start ">
             Front End Full Stack Developer specializing in React.js, Next.js and
             TypeScript. I have over <b>2 years </b>of experience in building and
             developing web applications for various start-ups and organizations.
@@ -45,9 +45,9 @@ const HeroSection = (props: Props) => {
               <Button variant={"secondary"}>Contact Me</Button>
             </Link>
           </div>
-          <section className="my-5">
+          <section className="my-5 text-center lg:text-start">
             <p>Organizations I have worked with: </p>
-            <div className="flex flex-wrap items-center justify-start gap-4">
+            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4">
               <img
                 title="Hirable"
                 alt="Hirable"

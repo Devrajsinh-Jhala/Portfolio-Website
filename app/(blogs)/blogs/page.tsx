@@ -35,7 +35,7 @@ const Blogs = (props: Props) => {
   };
 
   return (
-    <section className="my-10">
+    <section className="my-10 px-10 lg:px-0">
       <p className="text-3xl font-bold mb-5">My Blogs</p>
       <p className="mb-10 ">
         I publish blogs about Front End Development, React.js, Next.js, and

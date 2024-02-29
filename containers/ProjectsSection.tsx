@@ -16,7 +16,7 @@ const ProjectsSection = async (props: Props) => {
   const recentPosts = await sanityClient.fetch(recentPostsQuery);
   // console.log(recentPosts);
   return (
-    <section className="my-14">
+    <section className="my-14 px-10 lg:px-0">
       <p className="text-3xl font-bold">My Recent Projects</p>
       <section>
         <PostList posts={recentPosts} />

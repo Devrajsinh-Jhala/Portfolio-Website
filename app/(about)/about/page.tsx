@@ -23,7 +23,7 @@ const sarina = Sarina({
 type Props = {};
 const About = (props: Props) => {
   return (
-    <section className="my-10 max-w-4xl mx-auto">
+    <section className="my-10 px-10 lg:px-0 max-w-4xl mx-auto">
       <section className="flex flex-col items-center justify-center space-y-5">
         <div className="relative w-28 h-28 border border-foreground rounded-full">
           <Image
@@ -35,13 +35,13 @@ const About = (props: Props) => {
           />
         </div>
         <div className={sarina.className}>
-          <p className="text-2xl">
+          <p className="text-2xl text-center">
             &quot;Building is the actual way of learning&quot;
           </p>
         </div>
 
         {/* Statistics Section */}
-        <section className="flex  items-center justify-between space-x-10">
+        <section className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 items-center justify-between lg:space-x-10">
           <div className=" border rounded-md border-foreground flex w-56 flex-col justify-center items-center p-2">
             <p className="text-lg font-extrabold">630+</p>
             <p className="text-sm">Total Github Contributions</p>
@@ -117,7 +117,7 @@ const About = (props: Props) => {
           tests and got certified for the same. You can find some of the
           certificates below.
         </p>
-        <section className="grid grid-cols-1 w-full sm:grid-cols-2 self-center gap-2">
+        <section className="grid grid-cols-1 w-full sm:grid-cols-2 self-center gap-4">
           {certificateData.map((certificate, i) => (
             <CertificateComponent
               key={i}
@@ -140,7 +140,7 @@ const About = (props: Props) => {
           learning in many arenas under the guidance of my professors. Some of
           my published papers are below.
         </p>
-        <section className="grid grid-cols-1 w-full sm:grid-cols-2 self-center gap-2">
+        <section className="grid grid-cols-1 w-full sm:grid-cols-2 self-center gap-4">
           {researchData.map((research, i) => (
             <ResearchComponent
               key={i}

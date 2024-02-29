@@ -10,7 +10,7 @@ const BlogSection = async (props: Props) => {
   const homePagePosts = await getHomePagePosts();
 
   return (
-    <section className="my-10">
+    <section className="my-10 px-10 lg:px-0">
       <h1 className="text-3xl font-bold mb-5">My Recent Blogs</h1>
       <div className="grid grid-cols-1 gap-5 md:grid-cols-2 ">
         {homePagePosts.map((homePagePost: any, i: number): any => (

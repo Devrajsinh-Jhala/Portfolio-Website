@@ -11,7 +11,7 @@ export const meieScript = Meie_Script({
 type Props = {};
 const Footer = (props: Props) => {
   return (
-    <footer className=" flex mt-14 mb-5 items-center justify-between">
+    <footer className=" flex px-10 lg:px-0 lg:flex-row flex-col space-y-3 lg:space-y-0 mt-14 mb-5 items-center justify-between">
       <div className={meieScript.className}>
         <Link href={"/"}>
           <p className="font-extrabold text-[30px]">Devrajsinh</p>

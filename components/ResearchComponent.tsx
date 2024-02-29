@@ -26,7 +26,9 @@ const ResearchComponent = ({
       <div className="flex items-center gap-5 text-sm justify-between">
         <p className="text-sm">{publishedDate}</p>
         <Link href={paperLink} rel="noopener noreferrer" target="_blank">
-          <Button variant={"default"}>View Paper</Button>
+          <Button variant={"default"} className="text-sm lg:text-md">
+            View Paper
+          </Button>
         </Link>
       </div>
     </section>

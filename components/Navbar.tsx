@@ -26,7 +26,7 @@ const Navbar = (props: Props) => {
     },
   ];
   return (
-    <nav className="my-5 flex items-center justify-between ">
+    <nav className="my-5 lg:px-0 px-10 flex items-center justify-between ">
       <div className={meieScript.className}>
         <Link href={"/"}>
           <p className="font-extrabold text-[35px]">D.J.</p>

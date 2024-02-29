@@ -14,6 +14,9 @@ export async function getIndividualBlog(slug: string) {
                     brief
                     slug
                     views
+                    tags{
+                        name
+                    }
                     readTimeInMinutes
                     coverImage {
                       url
@@ -21,6 +24,13 @@ export async function getIndividualBlog(slug: string) {
                     publishedAt
                     content{
                       html
+                    }
+                    author{
+                        name
+                        bio{
+                            html
+                        }
+                        profilePicture
                     }
                 }
 

@@ -81,17 +81,44 @@ const Post = async ({ params: { slug } }: Props) => {
           <p className="text-sm mt-1 font-normal ">
             Published: {convertDate(post.publishedAt)}
           </p>
+          <div className="flex items-center justify-start mt-auto space-x-2">
+            {post.tags.map((tag: any, i: any) => (
+              <p
+                className="bg-muted-foreground/50 px-3 py-1 rounded-full text-sm font-semibold mt-4"
+                key={i}
+              >
+                {tag.name}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
-
-      {/* <article className="prose prose-stone  mt-[80px] max-w-none lg:prose-xl prose-p:text-sm prose-code:bg-orange-100 prose-code:px-1 prose-pre:bg-transparent prose-pre:px-4 md:prose-p:text-base">
-        <MDXRemote source={post?.content.markdown} options={options} />
-      </article> */}
 
       <div
         className="postContainer my-10"
         dangerouslySetInnerHTML={{ __html: post.content.html }}
       />
+
+      <hr className="border border-secondary-foreground" />
+      <section>
+        <p className="my-5">Written By:</p>
+        <section className="flex items-center space-x-3 ">
+          <div className="relative  w-10 h-10 rounded-full">
+            <Image
+              fill
+              priority
+              className="rounded-full"
+              src={post.author.profilePicture}
+              alt={post.author.name}
+            />
+          </div>
+          <p className="text-lg font-semibold">{post.author.name}</p>
+        </section>
+        <div
+          className="postContainer my-5"
+          dangerouslySetInnerHTML={{ __html: post.author.bio.html }}
+        />
+      </section>
     </main>
   );
 };
