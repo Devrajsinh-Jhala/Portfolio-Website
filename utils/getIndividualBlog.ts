@@ -20,7 +20,7 @@ export async function getIndividualBlog(slug: string) {
                     }
                     publishedAt
                     content{
-                      markdown
+                      html
                     }
                 }
 

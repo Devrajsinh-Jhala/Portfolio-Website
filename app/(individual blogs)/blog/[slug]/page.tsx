@@ -5,6 +5,8 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import { convertDate } from "@/utils/convertDate";
 import rehypeHighlight from "rehype-highlight";
 import Image from "next/image";
+import Link from "next/link";
+import "../../../../postStyle.css";
 
 type Props = {
   params: {
@@ -13,6 +15,18 @@ type Props = {
 };
 
 export const revalidate = 2628000;
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const post = await getIndividualBlog(params.slug);
+  return {
+    title: `Blog | ${post.title}`,
+    description: `${post.brief}`,
+  };
+}
 
 export async function generateStaticParams() {
   const homePagePosts = await getBlogPosts();
@@ -28,11 +42,11 @@ const Post = async ({ params: { slug } }: Props) => {
       rehypePlugins: [rehypeHighlight],
     },
   };
+  // const content = { __html: post };
 
-  // console.log(post);
   return (
     <main className="container mx-auto mt-8 flex max-w-4xl flex-col">
-      <a href="/" className="flex w-fit items-center space-x-2 text-sm">
+      <Link href="/" className="flex w-fit items-center space-x-2 text-sm">
         <svg
           width="15"
           height="15"
@@ -49,28 +63,34 @@ const Post = async ({ params: { slug } }: Props) => {
           ></path>
         </svg>
         <span>Back home</span>
-      </a>
+      </Link>
 
       <div className="mt-16 flex flex-col space-y-8">
-        <h1 className="text-3xl font-bold "> {post.title}</h1>
-
         {/* Cover Image and publishing date */}
-        <div className="flex flex-col space-y-2">
+        <div className="flex mb-5 flex-col ">
           <Image
             src={post.coverImage.url}
             alt={post.title}
-            width={1600}
-            height={840}
+            width={1000}
+            height={1000}
+            className="rounded-xl"
           />
-          <p className="text-sm font-normal ">
+          <h1 className="text-3xl mt-10 mb-3 font-bold "> {post.title}</h1>
+          <p className="line-clamp-none">{post.brief}</p>
+          <p className="text-sm mt-1 font-normal ">
             Published: {convertDate(post.publishedAt)}
           </p>
         </div>
       </div>
 
-      <article className="prose prose-stone  mt-[80px] max-w-none lg:prose-xl prose-p:text-sm prose-code:bg-orange-100 prose-code:px-1 prose-pre:bg-transparent prose-pre:px-4 md:prose-p:text-base">
+      {/* <article className="prose prose-stone  mt-[80px] max-w-none lg:prose-xl prose-p:text-sm prose-code:bg-orange-100 prose-code:px-1 prose-pre:bg-transparent prose-pre:px-4 md:prose-p:text-base">
         <MDXRemote source={post?.content.markdown} options={options} />
-      </article>
+      </article> */}
+
+      <div
+        className="postContainer my-10"
+        dangerouslySetInnerHTML={{ __html: post.content.html }}
+      />
     </main>
   );
 };

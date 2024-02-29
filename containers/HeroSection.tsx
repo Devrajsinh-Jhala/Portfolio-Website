@@ -41,7 +41,9 @@ const HeroSection = (props: Props) => {
             >
               <Button>View Resume</Button>
             </Link>
-            <Button variant={"secondary"}>Contact Me</Button>
+            <Link target="_blank" href={"mailto:jhaladevrajsinh11@gmail.com"}>
+              <Button variant={"secondary"}>Contact Me</Button>
+            </Link>
           </div>
           <section className="my-5">
             <p>Organizations I have worked with: </p>

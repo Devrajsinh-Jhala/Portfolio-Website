@@ -6,6 +6,8 @@ import CertificateComponent from "@/components/CertificateComponent";
 import { certificateData } from "@/public/certificateData";
 import ResearchComponent from "@/components/ResearchComponent";
 import { researchData } from "@/public/researchData";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const metadata = {
   title: "About Me | Devrajsinh Jhala",
@@ -50,6 +52,17 @@ const About = (props: Props) => {
             <p className="text-lg font-extrabold">1600+</p>
             <p className="text-sm">Total Hashnode Blog Views</p>
           </div>
+        </section>
+        <section>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={
+              "https://drive.google.com/file/d/115iOa5FOo7f3Nqox3RmrEaO00KN4aE9f/view?usp=sharing"
+            }
+          >
+            <Button variant={"default"}>View CV</Button>
+          </Link>
         </section>
       </section>
 

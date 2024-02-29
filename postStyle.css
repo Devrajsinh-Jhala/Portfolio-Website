@@ -1,0 +1,71 @@
+.postContainer h1 {
+
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bolder;
+  }
+  
+  .postContainer h2 {
+
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  /* Image Styles */
+  .postContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1rem 0;
+  }
+  
+  /* Code Block Styles */
+  .postContainer pre {
+
+    border-radius: 8px;
+    padding: 1rem;
+    overflow-x: auto;
+  }
+  
+  .postContainer code {
+    /* font-family: 'Menlo', 'Monaco', monospace; */
+    font-size: 16px;
+  }
+  
+  /* General Styling for Paragraphs */
+  .postContainer p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .postContainer ul {
+    list-style-type: disc; /* Use disc, circle, or square for different styles */
+    margin-bottom: 1rem;
+    margin-left: 1.5rem; /* Adjust the indentation as needed */
+  }
+  
+  /* Ordered List */
+  .postContainer ol {
+    list-style-type: decimal; /* Use decimal, lower-roman, upper-roman, etc. for different styles */
+    margin-bottom: 1rem;
+    margin-left: 1.5rem; /* Adjust the indentation as needed */
+  }
+  
+  /* List Items */
+  .postContainer li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Nested List Items */
+  .postContainer li ul,
+  .postContainer li ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 1.5rem; /* Adjust the indentation as needed */
+  }
+  

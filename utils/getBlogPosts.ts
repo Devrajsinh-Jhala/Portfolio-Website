@@ -1,12 +1,12 @@
 export async function getBlogPosts() {
-    try {
-        const { data } = await fetch("https://gql.hashnode.com", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-                query: ` {
+  try {
+    const { data } = await fetch("https://gql.hashnode.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        query: ` {
             publication(host: "devraj-jhala.hashnode.dev") {
               posts(first: 10) {
                 edges {
@@ -21,7 +21,7 @@ export async function getBlogPosts() {
                     }
                     publishedAt
                     content{
-                      markdown
+                      html
                     }
                 }
               }
@@ -29,11 +29,11 @@ export async function getBlogPosts() {
           }
         }
         `
-            }),
-        }).then((response) => response.json());
+      }),
+    }).then((response) => response.json());
 
-        return data.publication.posts.edges
-    } catch (err) {
-        console.log(err);
-    }
+    return data.publication.posts.edges
+  } catch (err) {
+    console.log(err);
+  }
 }
