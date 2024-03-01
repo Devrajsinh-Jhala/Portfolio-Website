@@ -116,7 +116,11 @@ deployedLink,
           </section>
         </section>
         <section className="mt-10 flex flex-col sm:flex-row sm:items-center items-start sm:justify-start space-y-5 sm:space-y-0 sm:space-x-5">
-          <Link href={post.deployedLink}>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={post.deployedLink}
+          >
             <Button
               variant={"default"}
               className="flex items-center justify-center space-x-2"
@@ -125,7 +129,11 @@ deployedLink,
               <p>Deployed Link</p>
             </Button>
           </Link>
-          <Link href={post.githubLink}>
+          <Link
+            target="_blank"
+            rel="noopener noreferrer"
+            href={post.githubLink}
+          >
             <Button
               variant={"default"}
               className="flex items-center justify-center space-x-2"
