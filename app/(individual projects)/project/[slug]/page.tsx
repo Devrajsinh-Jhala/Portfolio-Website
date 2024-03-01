@@ -8,6 +8,9 @@ import Navbar from "@/components/Navbar";
 import { Post } from "@/typings";
 import { Metadata } from "next";
 import { convertDate } from "@/utils/convertDate";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
+import { FaGithub, FaLink } from "react-icons/fa";
 
 type Props = {
   params: {
@@ -27,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   return {
     title: "Project | " + metadata.title,
+    description: metadata.description,
   };
 }
 
@@ -73,11 +77,13 @@ _id,
 _createdAt,
 _rev,
 _type,
-_updatedAt
+_updatedAt,
+githubLink,
+deployedLink,
     }
   `;
   const post: Post = await sanityClient.fetch(query, { slug });
-  // console.log(post);
+  // console.log(post.githubLink);
 
   return (
     <>
@@ -92,6 +98,7 @@ _updatedAt
 
           <section>
             <h1 className="text-3xl mt-10 mb-3 font-bold "> {post.title}</h1>
+            <p>{post.description}</p>
 
             <p className="text-sm mt-1 font-normal ">
               Finished: {convertDate(post._createdAt)}
@@ -107,6 +114,26 @@ _updatedAt
               ))}
             </div>
           </section>
+        </section>
+        <section className="mt-10 flex flex-col sm:flex-row sm:items-center items-start sm:justify-start space-y-5 sm:space-y-0 sm:space-x-5">
+          <Link href={post.deployedLink}>
+            <Button
+              variant={"default"}
+              className="flex items-center justify-center space-x-2"
+            >
+              <FaLink className="w-4 h-4" />
+              <p>Deployed Link</p>
+            </Button>
+          </Link>
+          <Link href={post.githubLink}>
+            <Button
+              variant={"default"}
+              className="flex items-center justify-center space-x-2"
+            >
+              <FaGithub className="w-4 h-4" />
+              <p>GitHub Link</p>
+            </Button>
+          </Link>
         </section>
 
         <article className="my-10">

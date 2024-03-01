@@ -43,7 +43,7 @@ const About = (props: Props) => {
         {/* Statistics Section */}
         <section className="flex lg:flex-row flex-col space-y-5 lg:space-y-0 items-center justify-between lg:space-x-10">
           <div className=" border rounded-md border-foreground flex w-56 flex-col justify-center items-center p-2">
-            <p className="text-lg font-extrabold">630+</p>
+            <p className="text-lg font-extrabold">650+</p>
             <p className="text-sm">Total Github Contributions</p>
           </div>
           <div className=" border rounded-md border-foreground flex w-56 flex-col justify-center items-center p-2">

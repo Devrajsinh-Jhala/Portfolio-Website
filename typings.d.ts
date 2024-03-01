@@ -34,6 +34,8 @@ interface Post extends SanityBody {
     slug: Slug;
     title: string;
     description: string;
+    githubLink: string;
+    deployedLink: string;
 }
 
 interface Author extends Base {
