@@ -10,6 +10,7 @@ export const metadata = {
 };
 type Props = {};
 
+export const revalidate = 86400;
 const allPostsQuery = groq`
 *[_type == 'post']{
   ...,
@@ -19,7 +20,7 @@ const allPostsQuery = groq`
 `;
 const Projects = async (props: Props) => {
   const allProjects = await sanityClient.fetch(allPostsQuery);
-
+  // console.log(allProjects);
   return (
     <section className="my-10 max-w-4xl px-5 lg:px-0 mx-auto">
       <section className="my-10">
