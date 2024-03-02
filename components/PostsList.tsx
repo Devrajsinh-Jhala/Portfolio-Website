@@ -9,6 +9,7 @@ type Props = {
 };
 
 const PostList = ({ posts }: Props) => {
+  // console.log(posts);
   return (
     <section className="my-5">
       <div className="grid grid-cols-1 md:grid-cols-2  gap-10 gap-y-16 pb-24">
@@ -31,7 +32,7 @@ const PostList = ({ posts }: Props) => {
                     <p className="font-bold">{post.title}</p>
 
                     <p>
-                      {new Date(post._createdAt).toLocaleDateString("en-US", {
+                      {new Date(post.publishedAt).toLocaleDateString("en-US", {
                         day: "numeric",
                         month: "long",
                         year: "numeric",

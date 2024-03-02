@@ -32,7 +32,7 @@ const ProjectsComponent = ({ posts }: Props) => {
                     <p className="font-bold">{post.title}</p>
 
                     <p>
-                      {new Date(post._createdAt).toLocaleDateString("en-US", {
+                      {new Date(post.publishedAt).toLocaleDateString("en-US", {
                         day: "numeric",
                         month: "long",
                         year: "numeric",

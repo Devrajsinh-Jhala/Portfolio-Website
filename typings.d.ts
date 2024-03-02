@@ -36,6 +36,7 @@ interface Post extends SanityBody {
     description: string;
     githubLink: string;
     deployedLink: string;
+    publishedAt: string;
 }
 
 interface Author extends Base {

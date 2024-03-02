@@ -8,7 +8,7 @@ const recentPostsQuery = groq`
   ...,
   author->,
   categories[]->
-} | order(_createdAt desc)[0...4]
+} | order(_updatedAt desc)[0...4]
 `;
 
 type Props = {};

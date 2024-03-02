@@ -9,6 +9,7 @@ export default function Home() {
     <section className=" max-w-4xl mx-auto">
       <HeroSection />
       <TopSkillsContainer />
+      <ExperienceSection />
       <ProjectsSection />
       <BlogSection />
     </section>

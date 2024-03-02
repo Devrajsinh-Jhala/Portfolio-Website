@@ -16,7 +16,7 @@ const allPostsQuery = groq`
   ...,
   author->,
   categories[]->
-} | order(_createdAt desc)
+} | order(_updatedAt desc)
 `;
 const Projects = async (props: Props) => {
   const allProjects = await sanityClient.fetch(allPostsQuery);
