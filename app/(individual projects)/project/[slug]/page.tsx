@@ -80,6 +80,7 @@ _type,
 _updatedAt,
 githubLink,
 deployedLink,
+publishedAt,
     }
   `;
   const post: Post = await sanityClient.fetch(query, { slug });
