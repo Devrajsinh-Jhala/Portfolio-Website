@@ -101,7 +101,7 @@ deployedLink,
             <p>{post.description}</p>
 
             <p className="text-sm mt-1 font-normal ">
-              Finished: {convertDate(post._createdAt)}
+              Finished: {convertDate(post.publishedAt)}
             </p>
             <div className="flex items-center justify-start mt-auto space-x-2">
               {post.categories.map((tag: any, i: any) => (
