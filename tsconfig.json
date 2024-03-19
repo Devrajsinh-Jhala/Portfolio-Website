@@ -21,6 +21,6 @@
       "@/*": ["./*"]
     },
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "sanity.js", "sanity/schemaTypes/post.js", "sanity/schemaTypes/category.js", "sanity/schemaTypes/blockContent.js", "sanity/schemaTypes/author.js", "sanity.config.js", "sanity.cli.js"],
   "exclude": ["node_modules"]
 }

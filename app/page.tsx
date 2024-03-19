@@ -4,6 +4,8 @@ import HeroSection from "@/containers/HeroSection";
 import ProjectsSection from "@/containers/ProjectsSection";
 import TopSkillsContainer from "@/containers/TopSkillsContainer";
 
+export const revalidate = 86400;
+
 export default function Home() {
   return (
     <section className=" max-w-4xl mx-auto">
